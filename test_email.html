@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Teste E-mail</title>
+    </head>
+    <body>
+        <input id="email"> coloque seu email aqui.
+        <button id="button" display="block" onclick="enviar()">enviar</button>
+    </body>
+
+    <script>
+        var mail = document.getElementById("email");
+        var button = document.getElementById("button");
+        function verificar (mail){
+            console.log(mail.value.length)
+            if (mail.value.length > 0){
+                if (mail.value.includes("@")){
+                    if (mail.value.includes("gmail") || mail.value.includes("hotmail") || mail.value.includes("outlook")){
+                        console.log("enviado")
+                    }else{
+                        console.log("email não aceito")
+                    }                            
+                }else{
+                    console.log("não é email")
+                }
+            }else{
+                console.log("inserir email");
+            }
+            console.log("email");
+        }
+
+        function enviar(){
+            verificar(mail)
+        }
+        
+        verificar(mail);
+
+    </script>
+</html>
